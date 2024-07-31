@@ -1,0 +1,120 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; 
+    margin: 0; 
+    background-color: #d4dae0;
+    font-family: Arial, sans-serif;
+    color: #f2f2f2;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+} 
+
+.container-simulator{
+    background-color: #333;
+    padding: 40px;
+    border-radius: 30px;
+    width: 1000px;    
+    height: 450px;
+}
+
+.header{
+    height: 30px;
+}
+
+.header h2 {
+    text-align: left;
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+
+.header p {
+    text-align: left;
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #999;
+}
+
+.form-class{
+    display: flex;
+    flex-direction: row;
+}
+
+.first-column{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+}
+
+.second-column{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+}
+
+.third-column{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+}
+
+
+
+.form-class input[type="text"], .form-class select {
+    font-family: "Orienta", sans-serif;
+    width: 60%;
+    padding: 14px;
+    margin-bottom: 20px;
+    border-radius: 8px; 
+    font-size: 16px;
+    border: 1px solid #555;
+    background-color: #222;
+    color: #f2f2f2;
+}
+
+/* .two-buttons{
+    display: flex;
+    flex-direction: row;
+    margin-left: 0%;
+} */
+
+.form-wrapper button[class="simulate-button"] {
+    font-family: "Orienta", sans-serif;
+    margin-left: 10px;
+    margin-top: 20px;
+    font-size: 15px;
+    width: 55%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    color: #f2f2f2;
+    cursor: pointer;
+    background-color: green;
+}
+
+.form-wrapper button[class="simulate-button"]:hover {
+    background-color: #22b322;
+}
+
+.form-wrapper button[class="add-values-button"] {
+    font-family: "Orienta", sans-serif;
+    margin-left: 10px;
+    margin-top: 20px;
+    font-size: 15px;
+    width: 55%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    color: #f2f2f2;
+    cursor: pointer;
+    background-color: rgb(151, 54, 155);
+}
+
+.form-wrapper button[class="add-values-button"]:hover {
+    background-color: #cc3bc5;
+}
