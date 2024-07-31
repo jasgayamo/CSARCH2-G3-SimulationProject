@@ -28,7 +28,7 @@ Output:
 - Snapshot of the cache memory
 - Option to output result to .txt file
 # Instructions
-1. Go to https://csarch2-g3-cache-simulator-fa-lru.github.io/
+1. Go to https://jasgayamo.github.io/CSARCH2-G3-SimulationProject/
 2. Fill the memory size, select size category, fill in access time, times to add the sequence
 3. Add values (each value must be separated by comma)
 4. Press simulate
