@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
 
-    const form = document.getElementById('form');
+    const form = document.getElementById('signupForm');
     if (form) {
         form.addEventListener('submit', function(event) {
             event.preventDefault();
@@ -31,9 +31,21 @@ document.addEventListener('DOMContentLoaded', function() {
             let results = simulateCache(blockSize, mmSize, cacheSize, mmValues, memoryAccessTime, cacheAccessTime, programFlow);
 
             displayResults(results);
+            displayInputSimulation(blockSize, mmSize, cacheSize, memoryAccessTime, cacheAccessTime, mmValues, programFlow);
 
-            document.getElementById('save-results').addEventListener('click', function() {
+            document.getElementById('output-as-txt').addEventListener('click', function() {
                 saveResults(results);
+            });
+
+            document.getElementById('restart').addEventListener('click', function() {
+                form.reset();
+                document.getElementById('input-simulation').innerHTML = '';
+                document.getElementById('cache-snapshot').innerText = '';
+                document.getElementById('cache-hits').innerText = 'Cache Hits: 0';
+                document.getElementById('cache-misses').innerText = 'Cache Misses: 0';
+                document.getElementById('miss-penalty').innerText = 'Miss Penalty: 0';
+                document.getElementById('avg-memory-access-time').innerText = 'Average Memory Access Time: 0';
+                document.getElementById('total-memory-access-time').innerText = 'Total Memory Access Time: 0';
             });
         });
     }
@@ -107,13 +119,29 @@ function simulateCache(blockSize, mmSize, cacheSize, mmValues, memAccessTime, ca
 }
 
 function displayResults(results) {
-    document.getElementById('results').style.display = 'block';
-    document.getElementById('cache-hits').innerText = `Number of Cache Hits: ${results.cacheHits}`;
-    document.getElementById('cache-misses').innerText = `Number of Cache Misses: ${results.cacheMisses}`;
+    document.getElementById('output').style.display = 'block';
+    document.getElementById('cache-hits').innerText = `Cache Hits: ${results.cacheHits}`;
+    document.getElementById('cache-misses').innerText = `Cache Misses: ${results.cacheMisses}`;
     document.getElementById('miss-penalty').innerText = `Miss Penalty: ${results.missPenalty}`;
     document.getElementById('avg-memory-access-time').innerText = `Average Memory Access Time: ${results.avgMemoryAccessTime}`;
     document.getElementById('total-memory-access-time').innerText = `Total Memory Access Time: ${results.totalMemoryAccessTime}`;
     document.getElementById('cache-snapshot').innerText = JSON.stringify(results.cacheSnapshot, null, 4);
+}
+
+function displayInputSimulation(blockSize, mmSize, cacheSize, memoryAccessTime, cacheAccessTime, mmValues, programFlow) {
+    let inputSimulationDiv = document.getElementById('input-simulation');
+
+    let inputHTML = `
+        <p><strong>Block Size:</strong> ${blockSize}</p>
+        <p><strong>Main Memory Size:</strong> ${mmSize}</p>
+        <p><strong>Cache Memory Size:</strong> ${cacheSize}</p>
+        <p><strong>Memory Access Time:</strong> ${memoryAccessTime}</p>
+        <p><strong>Cache Access Time:</strong> ${cacheAccessTime}</p>
+        <p><strong>Main Memory Values:</strong> ${mmValues.join(', ')}</p>
+        <p><strong>Program Flow:</strong> ${programFlow.join(', ')}</p>
+    `;
+
+    inputSimulationDiv.innerHTML = inputHTML;
 }
 
 function saveResults(results) {
