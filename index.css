@@ -83,7 +83,7 @@ body {
     margin-left: 0%;
 } */
 
-.form-wrapper button[class="simulate-button"] {
+.simulate-button {
     font-family: "Orienta", sans-serif;
     margin-left: 10px;
     margin-top: 20px;
@@ -97,11 +97,11 @@ body {
     background-color: green;
 }
 
-.form-wrapper button[class="simulate-button"]:hover {
+.simulate-button:hover {
     background-color: #22b322;
 }
 
-.form-wrapper button[class="add-values-button"] {
+.proceed-button {
     font-family: "Orienta", sans-serif;
     margin-left: 10px;
     margin-top: 20px;
@@ -115,6 +115,62 @@ body {
     background-color: rgb(151, 54, 155);
 }
 
-.form-wrapper button[class="add-values-button"]:hover {
+.proceed-button:hover {
     background-color: #cc3bc5;
 }
+
+#proceed-button-output{
+    max-width: 250px;
+}
+
+.simulator{
+    margin-top: 20px;
+}
+
+
+.main-content {
+    flex: 10;
+    padding: 0 15px; 
+} 
+ 
+
+.form-group {
+    margin-top: 10px;
+    margin-bottom: 1rem;
+  }
+  
+  .custom-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .custom-table th,
+  .custom-table td {
+    border: 1px solid #3a3535;
+    padding: 8px;
+  }
+  
+  .custom-table th {
+    background-color: #302f2f;
+    text-align: left;
+  }
+  
+  .custom-table tr:nth-child(even) {
+    background-color: #000000;
+  }
+  
+  .custom-table tr:hover {
+    background-color: #000000;
+  }
+
+  .output{
+    margin-top: 20px;
+  }
+
+  #ouput-as-txt{
+    max-width: 250px;
+  }
+  
+  #restart{
+    max-width: 250px;
+  }
