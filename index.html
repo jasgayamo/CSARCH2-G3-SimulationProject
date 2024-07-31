@@ -12,7 +12,7 @@
         <div class="container-simulator" id="form">
             <div class="top-section">
                 <div class="header">
-                    <h2>CSARCH2 Cache Simulater (LRU)</h2>
+                    <h2>CSARCH2 Cache Simulator (LRU)</h2>
                 </div>
         
                 <div class="header">
@@ -31,7 +31,7 @@
                         <input type="text" name="memory-value" id="memory-value" required>
                     </div>
                     <div class="second-column">
-                        <label for="main-memory-size" >Main Memory Size</label>
+                        <label for="main-memory-size">Main Memory Size</label>
                         <input type="text" name="main-memory-size" id="main-memory-size" required>
                         <label for="cache-access-time">Cache Access Time</label>
                         <input type="text" name="cache-access-time" id="cache-access-time" required>
@@ -40,14 +40,14 @@
                         <button type="button" class="proceed-button" id="add-values">Add Values</button>
                     </div>
                     <div class="third-column">
-                        <label for="cache-memory-size">Cache Memory Soze</label>
+                        <label for="cache-memory-size">Cache Memory Size</label>
                         <input type="text" name="cache-memory-size" id="cache-memory-size" required>
-                        <label for="memory-size-category"id="memory-size-category">View memory size as</label>
+                        <label for="memory-size-category">View memory size as</label>
                         <select class="form-control" id="memory-size-category">
                             <option>Block</option>
                             <option>Word</option>
                         </select>
-                        <label for="input-category" id="input-category">View input</label>
+                        <label for="input-category">View input</label>
                         <select class="form-control" id="input-category">
                             <option>Block</option>
                             <option>Address</option>
@@ -89,17 +89,17 @@
                         </tr>
                     </thead>
                     <tbody id="simulationTable">
-                        <!--ouputs-->
+                        <!-- outputs -->
                     </tbody>
                 </table>
-                <table class="custom-table" id="cache-simulation">
+                <table class="custom-table" id="cache-stats">
                     <thead>
                         <tr>
                             <th>Hit</th>
                             <th>Miss</th>
                         </tr>
                     </thead>
-                    <tbody id="simulation-table">
+                    <tbody id="simulation-stats">
                         <tr>
                             <td id="hits">0</td>
                             <td id="misses">0</td>
@@ -119,7 +119,7 @@
                 <p id="total-memory-access-time">Total Memory Access Time: 0</p>
                 <pre id="cache-snapshot"></pre>
             </div>
-            <button type="button" class="proceed-button" id="ouput-as-txt">Output as .txt</button>
+            <button type="button" class="proceed-button" id="output-as-txt">Output as .txt</button>
             <button type="button" class="simulate-button" id="restart">Restart</button>
         </div>
     </div>
